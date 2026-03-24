@@ -1,61 +1,75 @@
-# 📊 Expenses Tracker
-A simple Python CLI program to track and manage personal expenses, categorized as residential or variable, using PostgreSQL for data storage.
+# 📊 Controle de Gastos (Expenses Tracker)
+Programa em Python via CLI para controlar e gerenciar despesas pessoais, categorizadas como **residencial** ou **variável**, usando **PostgreSQL** para armazenamento dos dados.
 
--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 
-# 🛠 Features
+# 🛠 Funcionalidades
 
-- Register expenses with description, category, amount, and date.
-- Generate reports for a specific date range:
-- Total expenses
-- Total residential expenses
-- Total variable expenses
-- View a detailed table of all expenses in a given period.
-- Colorful and clear CLI interface for easy usage.
+* Registrar despesas com descrição, categoria, valor e data.
+* Gerar relatórios para um período específico:
 
--------------------------------------------------------------------------------------------------
+  * Total de gastos
+  * Total de gastos residenciais
+  * Total de gastos variáveis
+* Visualizar uma tabela detalhada de todas as despesas em um período selecionado.
+* Interface colorida e clara no terminal, facilitando o uso.
 
-# 📝 Technologies Used
+------------------------------------------------------------------------------------------------
 
-- Python 3.x
-- SQLAlchemy (ORM)
-- PostgreSQL
-- Colorama (for terminal colors)
-- Tabulate (for pretty tables)
-- Custom utility module (fanymodules) for input validation
+# 📝 Tecnologias Utilizadas
 
--------------------------------------------------------------------------------------------------
+* Python 3.x
+* SQLAlchemy (ORM)
+* PostgreSQL
+* Colorama (para cores no terminal)
+* Tabulate (para tabelas bonitinhas)
+* Módulo customizado (fanymodules) para validação de entradas
 
-# ⚙ Setup Instructions
+------------------------------------------------------------------------------------------------
 
-- Clone the repository
-- git clone https://github.com/YOUR_USERNAME/expenses.git
-- cd expenses
-- Install dependencies
-- pip install sqlalchemy psycopg2-binary colorama tabulate
-- Configure PostgreSQL
-- Update the DATABASE_URL in main.py:
-- DATABASE_URL = "postgresql+psycopg2://username:password@localhost:5432/database_name"
-- Make sure the PostgreSQL server is running.
-- Run the program
-- python main.py
+# ⚙ Instruções de Configuração
 
--------------------------------------------------------------------------------------------------
+* Clonar o repositório:
 
-# 🧭 How to Use
+  ```bash
+  git clone https://github.com/SEU_USUARIO/expenses.git
+  cd expenses
+  ```
+* Instalar dependências:
 
-- Menu Options
+  ```bash
+  pip install sqlalchemy psycopg2-binary colorama tabulate
+  ```
+* Configurar PostgreSQL:
 
-Register Expense – Enter expense details (description, category, value, date)
-Report by Period – Shows total, residential, and variable expenses in a selected date range
-View Expense Table – Shows a detailed table of all expenses in a selected date range
+  * Atualize a variável `DATABASE_URL` no arquivo `main.py`:
 
-- Exit Program
+    ```python
+    DATABASE_URL = "postgresql+psycopg2://usuario:senha@localhost:5432/nome_do_banco"
+    ```
+  * Certifique-se de que o servidor PostgreSQL está rodando.
+* Executar o programa:
 
--------------------------------------------------------------------------------------------------
+  ```bash
+  python main.py
+  ```
 
-# 💡 Notes
+------------------------------------------------------------------------------------------------
 
-- All inputs are validated using the custom fanymodules library.
-- Dates must be entered in DD/MM/YYYY format.
-- Supports both residential (fixed) and variable (flexible) expenses.
+# 🧭 Como Usar
+
+* Opções do Menu:
+
+  * **Registrar Despesa** – Inserir detalhes da despesa (descrição, categoria, valor, data)
+  * **Relatório por Período** – Mostra total de gastos, gastos residenciais e variáveis dentro do período selecionado
+  * **Ver Tabela de Despesas** – Mostra uma tabela detalhada de todas as despesas no período escolhido
+
+* Encerrar Programa
+
+------------------------------------------------------------------------------------------------
+
+# 💡 Observações
+
+* Todas as entradas são validadas pelo módulo customizado `fanymodules`.
+* As datas devem ser inseridas no formato **DD/MM/AAAA**.
+* Suporta tanto despesas **residenciais (fixas)** quanto **variáveis (flexíveis)**.
