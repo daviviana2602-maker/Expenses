@@ -57,7 +57,7 @@ def menu_choice():
 
 
 class ExpensesTable(Base):   # class is mandatory with database
-    __tablename__ = 'expenses'   # creating table estoque
+    __tablename__ = 'expenses'   # creating table expenses
     id = Column(Integer, primary_key=True)
     desc = Column(String)
     categoria = Column(String)
